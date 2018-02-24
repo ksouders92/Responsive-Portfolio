@@ -261,7 +261,7 @@ p {
 
 @media screen and (max-width: 768px) {
 #masthead {
-    width: 760px;
+    width: 660px;
 }
 .nav {
     float: left;
@@ -269,6 +269,17 @@ p {
 #contact-form {
     max-width: 600px;
 }
+
+.sidebar {
+    float: none;
+    width: 100%;
+}
+
+.author-image {
+    float: left;
+    width: 300px;
+}
+/* for some reason my image isn't resizing with this code */
 }
 
 @media screen and (max-width: 980px) {
@@ -276,9 +287,15 @@ p {
         width: 100%;
     }
 
-.main-container,
-.sidebar, {
-        width: 50%;
-    }
-
+.main-container,{
+    max-width: 780px;
 }
+
+.main-section {
+  width: 60%;
+}
+.sidebar {
+  width: 40%;
+  padding-left: 0;
+}
+}}
