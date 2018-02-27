@@ -120,10 +120,9 @@ nav a:first-child {
     float: right;
     padding: 30px;
     margin-bottom: 20px;
-    border: 1px solid #ddd;
-   
-    
-}
+    border: 1px solid #ddd;    
+} 
+/* I'm not sure but I'm thinking my 768px & 980px screen media queries aren't working because I still never got my sidebar in the right spot from assignment 1 */
 
 h3, .sidebar, h2 {
     border-bottom: 2px solid #eee;
@@ -225,77 +224,111 @@ input[type=submit] {
 }
 
 /* Media Queries here!*/
+/* 640 px screen */
 @media screen and (max-width: 640px) {
+   
+  #masthead {
+      position: static;
+      margin-bottom: 20px;
+  }  
+
+  header.container {
+      padding: 0;
+
+  }
   #logo {
       width: 100%;
-      text-align: center;
-  } 
+  }
+  
 nav {
     width: 100%;
     text-align: center;
+    margin: 15px 0;
 }   
-h1 {
-    width: 600px;
-}
-.author-image {
-    width: 88%;
-    padding-right: 20px;
-    padding-left: 0px;
-    padding-bottom: 20px;
+
+nav a {
+    width: 30%;
+    padding-left: 0;
+    margin-left: 0;
 }
 
-p {
-    width: 600px; 
-}
-.social {
-    max-width: 640px;
-  
-}
-/* couldn't get the sidebar to resize or float left */
-.work {
-    max-width: 600px;
-}
-#contact-form {
-    max-width: 600px;
-}
-
-@media screen and (max-width: 768px) {
-#masthead {
-    width: 660px;
-}
-.nav {
-    float: left;
-}
-#contact-form {
-    max-width: 600px;
+#main-container {
+    padding-top: 0;
 }
 
 .sidebar {
-    float: none;
-    width: 100%;
+    margin-top: 40px;
+}
+
+#logo {
+   width: 100%;
+}
+
+.work {
+    height: 100%;
+    max-width: 550px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+/* not sure how to get all the images to be centered */
+
+.container {
+    max-width: 600px;
+}
+
+/* 768 px screen */
+@media screen and (max-width: 768px) {
+.main-section,
+.sidebar {
+    max-width: 100%;
+}
+
+.main-container {
+    overflow: auto;
+}
+
+.sidebar {
+    margin-bottom: 40px;
+}
+
+.work {
+    width: 47%;
+    margin-bottom: 10px;
+}
+
+.work:nth-child(even) {
+    float: right;
 }
 
 .author-image {
-    float: left;
-    width: 300px;
-}
+    width: 50%;
+} 
 /* for some reason my image isn't resizing with this code */
 }
 
+/* 980 px screen */
 @media screen and (max-width: 980px) {
     .container, {
-        width: 100%;
+        padding: 0 20px;
+        max-width: 760px;
     }
 
 .main-container,{
-    max-width: 780px;
+    padding-top: 130px;
 }
 
 .main-section {
-  width: 60%;
+  max-width: 420px;
 }
-.sidebar {
-  width: 40%;
-  padding-left: 0;
+.work {
+    width: 100%;
 }
-}}
+.author-image {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+
+}
+}
